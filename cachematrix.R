@@ -11,7 +11,10 @@ makeCacheMatrix <- function(x = matrix()) {  # establish a function that takes a
   
   get <- function() x                        # this returns x when get is called
   
-  setinvert <- function(solv) iv <<- solv    # takes in a matrix and sets iv equal to that matrix  
+  setinvert <- function(solv) iv <<- solv    # takes in a matrix and sets iv equal to that matrix;  
+                                             # "solve" works just as well as "solv" but I wanted to 
+                                             # make it explicit that it is a variable and not the 
+                                             # built-in function because that's confusing
   
   getinvert <- function() iv                 # returns iv
   
